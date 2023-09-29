@@ -1,0 +1,114 @@
+$pale-blue: hsl(225, 100%, 94%);
+$bright-blue: hsl(245, 75%, 52%);
+$very-pale-blue: hsl(225, 100%, 98%);
+$desaturated-blue: hsl(224, 23%, 55%);
+$dark-blue: hsl(223, 47%, 23%);
+
+.card {
+  background-color: $very-pale-blue;
+  border-radius: 20px;
+  box-shadow: 1px 1px 15px 3px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
+  overflow: hidden;
+  width: clamp(100px, 95%, 40rem);
+
+  .imageContainer {
+    img {
+      width: 100%;
+      display: block;
+    }
+  }
+
+  .contentContainer {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2.5rem;
+    padding: 2.5rem 2rem;
+    text-align: center;
+
+    .title {
+      font-size: 2.1rem;
+      color: $dark-blue;
+      font-weight: 900;
+    }
+
+    .desc {
+      font-size: 1.5rem;
+      line-height: 1.5;
+      letter-spacing: 0.5px;
+      color: $desaturated-blue;
+    }
+
+    .box {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: rgba(224, 232, 255, 0.4);
+      padding: 10px;
+      border-radius: 10px;
+
+      .leftSide {
+        display: flex;
+        align-items: center;
+        column-gap: 1.2rem;
+
+        div {
+          display: flex;
+          flex-direction: column;
+          row-gap: 0.3rem;
+
+          span {
+            font-size: 1.3rem;
+
+            &:first-child {
+              font-weight: 900;
+              color: $dark-blue;
+            }
+
+            &:last-child {
+              color: $desaturated-blue;
+            }
+          }
+        }
+      }
+
+      a {
+        font-size: 1.3rem;
+        color: $bright-blue;
+        font-weight: 700;
+      }
+
+      a:hover {
+        opacity: 0.7;
+        text-decoration: none;
+      }
+    }
+
+    .btn {
+      border: none;
+      background-color: $bright-blue;
+      color: $very-pale-blue;
+      font-weight: 700;
+      padding: 1.5rem 0;
+      letter-spacing: 0.5px;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+
+    .btn:hover {
+      opacity: 0.7;
+    }
+
+    .cancelOrder {
+      font-size: 1.4rem;
+      font-weight: 900;
+      color: $desaturated-blue;
+      cursor: pointer;
+    }
+
+    .cancelOrder:hover {
+      color: $dark-blue;
+    }
+  }
+}
